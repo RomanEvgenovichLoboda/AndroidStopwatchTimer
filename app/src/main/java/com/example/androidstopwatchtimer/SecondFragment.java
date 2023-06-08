@@ -37,37 +37,24 @@ public class SecondFragment extends Fragment {
     private TextView textStpWatch;
     private boolean isTimerRunning = false;
     private Timer timer;
-    private TimerTask task;
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         textStpWatch=binding.textviewStpWatch;
-        strtButton=binding.buttonStrtSW;
-        stpButton=binding.buttonStopSW;
+        strtButton=binding.buttonStrt;
+        stpButton=binding.buttonStop;
         stpButton.setEnabled(false);
         strtButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!isTimerRunning) startTimer();
+                if(!isTimerRunning) startStopWatch();
             }
         });
         stpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(isTimerRunning) stopStopwatch();
+                if(isTimerRunning) stopStopWatch();
             }
         });
-
-//        Chronometer chronometer = (Chronometer) binding.chronometer;
-//        long startTime = SystemClock.elapsedRealtime();
-//        chronometer.setBase(startTime);
-
-
-
-
-
-
-
-
         binding.buttonTimer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,13 +63,12 @@ public class SecondFragment extends Fragment {
             }
         });
     }
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
-    private void startTimer(){
+    private void startStopWatch(){
         isTimerRunning = true;
         timer = new Timer();
         TimerTask task = new TimerTask() {
@@ -98,7 +84,7 @@ public class SecondFragment extends Fragment {
         strtButton.setEnabled(false);
         stpButton.setEnabled(true);
     }
-    private void stopStopwatch(){
+    private void stopStopWatch(){
         isTimerRunning = false;
         timer.cancel();
         timer = null;
@@ -117,10 +103,4 @@ public class SecondFragment extends Fragment {
             }
         });
     }
-//    private void resetTimer() {
-//        isTimerRunning = false;
-//        strtButton.setEnabled(true);
-//        stpButton.setEnabled(false);
-//    }
-
 }

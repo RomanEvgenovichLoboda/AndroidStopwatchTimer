@@ -24,13 +24,10 @@ public class FirstFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
-
-
     private NumberPicker pickerH;
     private NumberPicker pickerM;
     private NumberPicker pickerS;
@@ -41,20 +38,15 @@ public class FirstFragment extends Fragment {
     private CountDownTimer countDownTimer;
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //View view = inflater.inflate(R.layout.timer, container, false);
         pickerH = binding.HourPicker;
         pickerH.setMaxValue(23);
         pickerH.setMinValue(0);
-        //pickerH.setDisplayedValues(setValueOfPickers(24));
         pickerM = binding.MinutesPicker;
-
         pickerM.setMaxValue(59);
         pickerM.setMinValue(0);
-        //pickerM.setDisplayedValues(setValueOfPickers(60));
         pickerS = binding.SecondPicker;
         pickerS.setMaxValue(59);
         pickerS.setMinValue(0);
-        //pickerS.setDisplayedValues(setValueOfPickers(60));
         textTimer=binding.textviewTimer;
         strtButton=binding.buttonStrt;
         stpButton=binding.buttonStop;
@@ -89,7 +81,6 @@ public class FirstFragment extends Fragment {
                         pickerM.setEnabled(false);
                         pickerS.setEnabled(false);
                     }
-
                 }
             }
         });
@@ -103,8 +94,6 @@ public class FirstFragment extends Fragment {
                 }
             }
         });
-
-
 
         binding.buttonStpWatch.setOnClickListener(new View.OnClickListener() {
             @Override
