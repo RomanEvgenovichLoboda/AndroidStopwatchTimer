@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#423E3E"
     tools:context=".FirstFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#DC8888"
+        android:background="#FF9800"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,25 +25,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:descendantFocusability="blocksDescendants" >
-            </NumberPicker>
+                android:descendantFocusability="blocksDescendants"
+                android:scrollbarStyle="insideOverlay"></NumberPicker>
+
             <NumberPicker
                 android:id="@+id/MinutesPicker"
+                style="@android:style/Widget.Material.Light.NumberPicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:descendantFocusability="blocksDescendants" >
-            </NumberPicker>
+                android:descendantFocusability="blocksDescendants"></NumberPicker>
+
             <NumberPicker
                 android:id="@+id/SecondPicker"
+                style="@android:style/Widget.Material.NumberPicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:descendantFocusability="blocksDescendants" >
-            </NumberPicker>
+                android:descendantFocusability="blocksDescendants"></NumberPicker>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layoutButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -54,34 +60,38 @@
                 android:text="Strt" />
 
             <Button
-                android:id="@+id/buttonPause"
+                android:id="@+id/buttonStop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
-                android:text="Pause" />
+                android:text="Stop" />
         </LinearLayout>
 
 
     </LinearLayout>
-<!--    <TextView-->
-<!--        android:id="@+id/textview_first"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/hello_first_fragment"-->
-<!--        app:layout_constraintBottom_toTopOf="@id/button_first"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/textview_Timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#E85050"
+        android:text="Timer"
+        android:textColor="#F3F2F2"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toTopOf="@id/button_StpWatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_StpWatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Timer"
+        android:text="StopWatch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-<!--        app:layout_constraintTop_toBottomOf="@id/textview_first" -->
+        app:layout_constraintStart_toStartOf="parent" />
+    <!--        app:layout_constraintTop_toBottomOf="@id/textview_first" -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
