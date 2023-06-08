@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:descendantFocusability="blocksDescendants"
-                android:scrollbarStyle="insideOverlay"></NumberPicker>
+                android:scrollbarStyle="insideOverlay"/>
 
             <NumberPicker
                 android:id="@+id/MinutesPicker"
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:descendantFocusability="blocksDescendants"></NumberPicker>
+                android:descendantFocusability="blocksDescendants"/>
 
             <NumberPicker
                 android:id="@+id/SecondPicker"
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:descendantFocusability="blocksDescendants"></NumberPicker>
+                android:descendantFocusability="blocksDescendants"/>
         </LinearLayout>
 
         <LinearLayout

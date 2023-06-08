@@ -41,7 +41,6 @@ public class FirstFragment extends Fragment {
     private CountDownTimer countDownTimer;
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         //View view = inflater.inflate(R.layout.timer, container, false);
         pickerH = binding.HourPicker;
         pickerH.setMaxValue(23);
